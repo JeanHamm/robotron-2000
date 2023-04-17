@@ -1,7 +1,14 @@
 const robotron = document.querySelector('#robotron');
-robotron.onclick = toque;
 
-function toque() {
-    console.log('Bem vindo');
+robotron.addEventListener('click', () => {
+    dizer("pedro");
+    
+});
 
+
+
+function dizer(nome){
+console.log('Oi ' + nome);
+console.log('Seja bem-vindo');
 }
+
