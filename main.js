@@ -1,14 +1,17 @@
 const robotron = document.querySelector('#robotron');
+const controle = document.querySelectorAll('.controle-ajuste');
 
-robotron.addEventListener('click', () => {
-    dizer("pedro");
-    
-});
+controle.forEach(function(elemento){
+    elemento.addEventListener('click', function(evento){
+        manipulaDados(evento.target.textContent, evento.target.parentNode);
+    })
+})
 
+function manipulaDados(operacao, controle){
+    const peca = controle.querySelector('.controle-contador');
 
-
-function dizer(nome){
-console.log('Oi ' + nome);
-console.log('Seja bem-vindo');
-}
-
+    if(operacao === '+'){
+        peca.value = parseInt(peca.value) + 1;
+    } else{
+        peca.value = parseInt(peca.value) - 1;
+     }}
